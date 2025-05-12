@@ -8,4 +8,4 @@
 
 - Please also note that this is my first semester coding in R, and the programs themselves may not be of the best quality.
 
-- I wish you luck with your studies, and please let me know if these programs helped :)
+- I wish you luck with your studies, and please let me know if these programs helped :3
