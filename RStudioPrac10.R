@@ -55,14 +55,14 @@ autoplot(df.data)
 df.mod_1 <- snaive(df.data_win, h = 12)
 
 #Then we plot this model alongside our original time series:
-autoplot(df.data) + autolayer(df.mod_1, PI = F)
+autoplot(df.data_win) + autolayer(df.mod_1, PI = F)
 #By inspecting this plot of the forecast model, we see that it seems to get all the seasonal peaks and troughs in the right places,
 #which makes sense because of the seasonality of this time series, but the forecasted values seem to underestimate the true values
 #at most points, which can be attributed to the increasing linear trend of this series.
 
 #Lastly, let's examine the residuals of forecast model to determine its suitability to forecast future values
 checkresiduals(df.mod_1)
-#As before, the correlogram (and Ljung-Box test) indicates that there is no significant autocorrelation (which means the model has captured all relevant information in the data),
+#The correlogram (and Ljung-Box test) indicates that there is no significant autocorrelation (which means the model has captured all relevant information in the data),
 #but we also see that the residuals appear to be approximately normally distributed. The plot of the residuals also seems to be random, with a relatively constant variance as well.
 #HOWEVER, the mean of the residuals is NOT zero, which means the forecasts will be biased. We saw this when we plotted the forecast model against the test data.
 #Therefore, this model is ultimately unsuitable to forecast future values, especially for long term forecasts, due to the linear trend that is not being captured.
