@@ -13,8 +13,8 @@ df.data <- forecast::wineind
 df.data_win <- window(df.data, c(1980, 1), end = c(1985, 12))
 
 #Explore the time series by printing and plotting it: 
-print(df.data)
-autoplot(df.data) + ggtitle("Monthly sales by Australian wine makers between Jan 1980 and December 1985") + ylab("Monthly sales")
+print(df.data_win)
+autoplot(df.data_win) + ggtitle("Monthly sales by Australian wine makers between Jan 1980 and December 1985") + ylab("Monthly sales")
 #By inspecting this plot, we see that there is seasonality (with a period of about 1 year), random variation and an increasing linear trend. There is no cyclicality.
 
 #We now need to apply a variance stabilising transformation in order to make the time series stationary (no trend or seasonality):
