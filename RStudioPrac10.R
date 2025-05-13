@@ -45,8 +45,6 @@ Acf(df.stabilised_diffed)
 #By observing this plot, we can see that the autocorrelation appears to be random and statistically insignificant (all bars are within the 95% confidence bounds), so we can conclude that
 #there is no significant autocorrelation in the time series, which provides further evidence of its stationary nature.
 
-autoplot(df.data)
-
 #Let's now forecast future values using a simple forecasting method. Amongst the four simple forecasting methods covered in this course (average, naive, seasonal naive and drift),
 #I believe the best is seasonal naive. Although it does not take trend into account, our time series has a strong seasonal component and should be fine for short term predictions.
 #NOTE: A better forecasting model would be Holt-Winters, but this is likely not the intended model for this practical as it takes place before Holt-Winters was introduced in class.
