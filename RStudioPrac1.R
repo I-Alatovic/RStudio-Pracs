@@ -23,7 +23,7 @@ executions.sd <- sd(executions.data)
 numcalls.sd <- sd(numcalls.data)
 
 #Calculate correlation coefficient:
-corr_calls_exe <- cor(execs_data,numcalls_data)
+corr_calls_exe <- cor(executions.data,numcalls.data)
 
 #Plot data with number of calls on the x-axis, number of trade executions
 #on the y-axis, pch = 20 (this means that the marker is a bullet point)
