@@ -16,7 +16,7 @@ autoplot(df.data) + ggtitle("Monthly wine sales by Australian winemakers from Ja
 
 #Partition data into training data and test data:
 df.training <- window(df.data, c(1980, 1), c(1986, 12))
-df.test <- window(df.data, c(1986, 1))
+df.test <- window(df.data, c(1987, 1))
 
 #We will now fit two exponential smoothing models; one to capture the trend, the other to capture the trend and seasonality.
 #To capture the trend, we will use Holt's Linear Trend method, and to capture trend and seasonality we will use Holt-Winters.
@@ -42,7 +42,7 @@ checkresiduals(df.mod2)
 #of zero and the variance appears constant. That said, the strong autocorrelation means that this model is not a good fit for the data.
 
 #In terms of goodness-of-fit, df.mod2 performs much better, but still has some autocorrelation. The p-value is such that we can conclude that there is significant autocorrelation at at least one lag up to lag 17,
-#namely at lag 4. The variance does appear somewhat constant, and the residuals appear approximately normally distributed with a mean close to 0. Overall, this model is a better
+#namely at lag 4. The variance does appear somewhat constant, and the residuals appear approximately normally distributed with a mean of 0. Overall, this model is a better
 #fit than df.mod1, but is still not perfect.
 
 #Finally, observe that the AIC and AICc for df.mod2 are both less than that of df.mod1, indicating a better fit.
