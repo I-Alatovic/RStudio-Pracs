@@ -18,7 +18,7 @@ cars.data <- read_xlsx('Cars_data.xlsx')
 boxplot(goals.data$Goals ~ goals.data$Player)
 
 #Then we perform the test using the friedman.test function:
-friedman.test(y = goals.data$Goals, groups = goals.data$Kit, blocks = goals.data$Player)
+friedman.test(y = goals.data$Goals, groups = goals.data$Player, blocks = goals.data$Kit)
 
 #P-value = 0.45, so we reject the null hypothesis at 1% (and every other standard signicance level) and conclude that
 #at least one attacker has a median number of goals different from the others.
