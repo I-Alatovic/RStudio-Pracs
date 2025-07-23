@@ -1,5 +1,7 @@
 - As stated in the description, these R files are solutions for the RStudio pracs for STA2020F 2025 at UCT.
 
+- They are, and will remain, publicly available, but are only intended for current students of this course.
+
 - They were created solely by myself, Isa Alatovic, and are not for sale or redistribution.
 
 - Despite my best efforts to the contrary, there may be some errors in the code - logical, syntactic or otherwise. Please let me know if you find any so I can fix them.
